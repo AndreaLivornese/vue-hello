@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vue-hello</title>
+
+    <style>
+
+        body{
+            background-color: gray;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 
     <div id="app">
-        
+
+
+        <h1>
+            {{title}}
+        </h1>
+
     </div>
 
 
@@ -21,7 +38,7 @@
         createApp({
             data() {
                 return {
-                    message: 'Hello Vue!'
+                    title: 'Ciao! Questa è la mia prima prova su Vue.'
                 }
             }
         }).mount('#app')
