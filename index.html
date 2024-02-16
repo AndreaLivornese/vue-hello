@@ -7,8 +7,13 @@
 
     <style>
 
+        *{
+            box-sizing: border-box;
+        }
+
         body{
             background-color: gray;
+            font-family: sans-serif;
         }
 
         h1{
@@ -24,7 +29,33 @@
             height: auto;
 
             object-fit: cover;
+
+            border: 2px solid #839098;
+            border-radius: 20px;
+
+            margin-bottom: 30px;
+
+            box-shadow: 0 0 20px black;
         }
+
+        .input-box{
+            text-align: center;
+        }
+
+        .input-box p{
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .input-box input{
+            padding: 10px 20px;
+
+            border:none;
+
+            border-radius: 10px;
+        }
+
+        
 
     </style>
 </head>
@@ -44,6 +75,11 @@
             <img :src="url" alt="">
         </div>
 
+        <div class="input-box">
+            <p>{{dinamicTxt}}</p>
+            <input type="text" v-model="dinamicTxt" placeholder="Scirivi qualcosa e scoprirai...">
+        </div>
+
         
 
     </div>
@@ -58,7 +94,8 @@
                 return {
                     title: 'Ciao! Questa è la mia prima prova su Vue.',
                     description: "Ecco qui una stupenda Ducati Hypermotard 950 SP e spero di averla il prima possibile così da lanciarla alla prima curva :)",
-                    url: "https://www.motociclismo.it/files/articoli/7/8/6/78639/B_ducati-hypermotard-950-sp-38-uc287662-high.jpg"
+                    url: "https://www.motociclismo.it/files/articoli/7/8/6/78639/B_ducati-hypermotard-950-sp-38-uc287662-high.jpg",
+                    dinamicTxt:""
 
                 }
             }
